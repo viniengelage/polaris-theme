@@ -2,7 +2,7 @@
   "name": "polar-dark",
   "displayName": "Polar Dark",
   "description": "A dark theme for VS Code with a violet north star. Syntax colours derived from a working design system, not picked in isolation.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "viniengelage",
   "license": "MIT",
   "repository": {
