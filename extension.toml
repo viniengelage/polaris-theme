@@ -1,0 +1,7 @@
+id = "polaris"
+name = "Polaris"
+schema_version = 1
+version = "1.0.0"
+authors = ["Vinicios Engelage"]
+description = "Dark theme for Zed with a violet north star. Syntax colours derived from a working design system, not picked in isolation."
+repository = "https://github.com/viniengelage/polaris-theme"

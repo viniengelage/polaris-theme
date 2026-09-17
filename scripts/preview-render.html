@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      /* Altura em PIXELS, não 100%: o viewport que o Chrome headless entrega é
+         mais curto que o --window-size pedido, então `height: 100%` centraliza
+         a imagem numa caixa menor que o screenshot e o corte central do `sips`
+         sai deslocado. Com a caixa fixa, imagem e screenshot compartilham o
+         mesmo centro. */
+      html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; }
+      body { width: 900px; height: 600px; display: grid; place-items: center; }
+      img { display: block; }
+    </style>
+  </head>
+  <body>
+    <img src="../assets/preview.svg" width="760" height="430" />
+  </body>
+</html>

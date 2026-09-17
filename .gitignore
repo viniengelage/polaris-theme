@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# Artefatos temporários do render de assets
+*.tmp.png
+/tmp/

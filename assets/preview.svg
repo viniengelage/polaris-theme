@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" role="img"
+  aria-label="Polaris Dark renderizando um componente TSX no Zed">
+  <title>Polaris Dark — preview</title>
+  <desc>Amostra de TSX colorida com as cores exatas de themes/polaris.json.</desc>
+
+  <defs>
+    <clipPath id="frame">
+      <rect width="760" height="430" rx="16" ry="16" />
+    </clipPath>
+    <style>
+      .m { font-family: "JetBrains Mono", SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+      .gut { fill: #322C46; }
+      .gut-active { fill: #837C98; }
+      .comment { fill: #837C98; font-style: italic; }
+      .kw { fill: #C084FC; }
+      .type { fill: #60A5FA; }
+      .builtin { fill: #D8B4FE; }
+      .str { fill: #2DD4BF; }
+      .fn { fill: #60A5FA; }
+      .num { fill: #E8B368; }
+      .attr { fill: #E8B368; }
+      .punct { fill: #837C98; }
+      .op { fill: #9C96AE; }
+      .var { fill: #EDEAF5; }
+      .prop { fill: #C7C2D6; }
+      .tag { fill: #C084FC; }
+      .param { fill: #EDEAF5; font-style: italic; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="760" height="430" fill="#08070C" />
+
+    <!-- barra de janela -->
+    <rect width="760" height="44" fill="#FFFFFF" fill-opacity="0.03" />
+    <rect x="12" y="8" width="104" height="28" rx="8" fill="#08070C" />
+    <text class="m" x="24" y="27" font-size="11" font-weight="500" fill="#C7C2D6">timeline.tsx</text>
+    <text class="m" x="130" y="27" font-size="11" fill="#837C98">work.tsx</text>
+    <text class="m" x="744" y="27" font-size="10" font-weight="500" letter-spacing="1.2"
+      text-anchor="end" fill="#837C98">POLARIS DARK</text>
+    <rect y="44" width="760" height="1" fill="#1F1C2B" />
+
+    <!-- editor.active_line.background: violeta-800 a 14% -->
+    <rect x="0" y="288.5" width="760" height="22.75" fill="#6D28D9" fill-opacity="0.14" />
+
+    <!-- gutter -->
+    <g class="m" text-anchor="end">
+      <text class="gut" x="32" y="77.5">1</text>
+      <text class="gut" x="32" y="100.25">2</text>
+      <text class="gut" x="32" y="123">3</text>
+      <text class="gut" x="32" y="145.75">4</text>
+      <text class="gut" x="32" y="168.5">5</text>
+      <text class="gut" x="32" y="191.25">6</text>
+      <text class="gut" x="32" y="214">7</text>
+      <text class="gut" x="32" y="236.75">8</text>
+      <text class="gut" x="32" y="259.5">9</text>
+      <text class="gut" x="32" y="282.25">10</text>
+      <text class="gut-active" x="32" y="305">11</text>
+      <text class="gut" x="32" y="327.75">12</text>
+      <text class="gut" x="32" y="350.5">13</text>
+      <text class="gut" x="32" y="373.25">14</text>
+      <text class="gut" x="32" y="396">15</text>
+    </g>
+
+    <!-- código -->
+    <g class="m" xml:space="preserve">
+      <text x="48" y="77.5" class="comment">// timeline.tsx — a régua do tempo</text>
+
+      <text x="48" y="100.25"><tspan class="kw">type</tspan><tspan class="prop"> </tspan><tspan
+          class="type">Entry</tspan><tspan class="prop"> </tspan><tspan class="op">=</tspan><tspan
+          class="prop"> </tspan><tspan class="punct">{</tspan></text>
+
+      <text x="48" y="123"><tspan class="prop">&#160;&#160;year</tspan><tspan
+          class="punct">:</tspan><tspan class="prop"> </tspan><tspan class="builtin">string</tspan><tspan
+          class="punct">;</tspan></text>
+
+      <text x="48" y="145.75"><tspan class="prop">&#160;&#160;current</tspan><tspan
+          class="punct">?:</tspan><tspan class="prop"> </tspan><tspan class="builtin">boolean</tspan><tspan
+          class="punct">;</tspan></text>
+
+      <text x="48" y="168.5" class="punct">};</text>
+
+      <text x="48" y="214"><tspan class="kw">export</tspan><tspan class="prop"> </tspan><tspan
+          class="kw">function</tspan><tspan class="prop"> </tspan><tspan class="fn">Timeline</tspan><tspan
+          class="punct">({ </tspan><tspan class="var">entries</tspan><tspan class="punct"> }: </tspan><tspan
+          class="type">Props</tspan><tspan class="punct">) {</tspan></text>
+
+      <text x="48" y="236.75"><tspan class="prop">&#160;&#160;</tspan><tspan class="kw">return</tspan><tspan
+          class="punct"> (</tspan></text>
+
+      <text x="48" y="259.5"><tspan class="punct">&#160;&#160;&#160;&#160;&lt;</tspan><tspan class="tag">ol</tspan><tspan
+          class="prop"> </tspan><tspan class="attr">className</tspan><tspan class="op">=</tspan><tspan
+          class="str">"timeline"</tspan><tspan class="punct">&gt;</tspan></text>
+
+      <text x="48" y="282.25"><tspan class="punct">&#160;&#160;&#160;&#160;&#160;&#160;{</tspan><tspan class="var">entries</tspan><tspan
+          class="punct">.</tspan><tspan class="fn">map</tspan><tspan class="punct">((</tspan><tspan
+          class="param">entry</tspan><tspan class="punct">, </tspan><tspan class="param">index</tspan><tspan
+          class="punct">) </tspan><tspan class="op">=&gt;</tspan><tspan class="punct"> (</tspan></text>
+
+      <text x="48" y="305"><tspan class="punct">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;</tspan><tspan class="tag">Reveal</tspan><tspan
+          class="prop"> </tspan><tspan class="attr">key</tspan><tspan class="op">=</tspan><tspan
+          class="punct">{</tspan><tspan class="var">index</tspan><tspan class="punct">} </tspan><tspan
+          class="attr">delay</tspan><tspan class="op">=</tspan><tspan class="punct">{</tspan><tspan
+          class="var">index</tspan><tspan class="prop"> </tspan><tspan class="op">*</tspan><tspan
+          class="prop"> </tspan><tspan class="num">60</tspan><tspan class="punct">} /&gt;</tspan></text>
+
+      <text x="48" y="327.75" class="punct">&#160;&#160;&#160;&#160;&#160;&#160;))}</text>
+
+      <text x="48" y="350.5"><tspan class="punct">&#160;&#160;&#160;&#160;&lt;/</tspan><tspan class="tag">ol</tspan><tspan
+          class="punct">&gt;</tspan></text>
+
+      <text x="48" y="373.25" class="punct">&#160;&#160;);</text>
+      <text x="48" y="396" class="punct">}</text>
+    </g>
+  </g>
+
+  <rect x="0.5" y="0.5" width="759" height="429" rx="15.5" ry="15.5"
+    fill="none" stroke="#1F1C2B" />
+</svg>
