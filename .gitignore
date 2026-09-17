@@ -4,3 +4,6 @@
 # Artefatos temporários do render de assets
 *.tmp.png
 /tmp/
+
+# Pacotes locais gerados pelo VS Code Extension Manager
+*.vsix

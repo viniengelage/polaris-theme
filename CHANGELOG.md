@@ -11,7 +11,8 @@ First release.
 
 ### Added
 
-- `Polaris Dark` — 150 style keys, 50 tree-sitter captures, full terminal ANSI ramp with `dim`
+- `Polaris Dark` for VS Code — UI chrome, semantic tokens, TextMate scopes, Git/diff states and the full 16-colour terminal ANSI ramp.
+- `Polaris Dark` for Zed — 150 style keys, 50 tree-sitter captures, full terminal ANSI ramp with `dim`
   and `bright` steps.
 - Brand mark as vector (`assets/icon.svg`) plus 512/128/32 raster exports and a reproducible
   render script.

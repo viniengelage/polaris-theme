@@ -1,0 +1,12 @@
+.git/**
+.github/**
+.gitignore
+.DS_Store
+*.vsix
+scripts/**
+themes/polaris.json
+extension.toml
+assets/icon.svg
+assets/preview.svg
+*.tmp.png
+tmp/**

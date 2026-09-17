@@ -1,0 +1,48 @@
+{
+  "name": "polaris-dark",
+  "displayName": "Polaris Dark",
+  "description": "A dark theme for VS Code with a violet north star. Syntax colours derived from a working design system, not picked in isolation.",
+  "version": "1.0.0",
+  "publisher": "viniengelage",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viniengelage/polaris-theme.git"
+  },
+  "homepage": "https://github.com/viniengelage/polaris-theme#readme",
+  "bugs": {
+    "url": "https://github.com/viniengelage/polaris-theme/issues"
+  },
+  "icon": "assets/icon-128.png",
+  "galleryBanner": {
+    "color": "#0E0D14",
+    "theme": "dark"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark theme",
+    "violet",
+    "purple",
+    "polaris",
+    "zed",
+    "cursor"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "extensionKind": [
+    "ui"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Polaris Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Polaris Dark-color-theme.json"
+      }
+    ]
+  }
+}

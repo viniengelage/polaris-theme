@@ -1,30 +1,40 @@
 <div align="center">
-  <img src="assets/icon.svg" width="112" height="112" alt="Polaris" />
+  <img src="assets/icon-128.png" width="112" height="112" alt="Polaris" />
   <h1>Polaris</h1>
-  <p><strong>A dark theme for <a href="https://zed.dev">Zed</a> with a violet north star.</strong></p>
+  <p><strong>A dark theme for VS Code and Zed with a violet north star.</strong></p>
   <p>Syntax colours derived from a working design system — not picked in isolation.</p>
 </div>
 
 <img src="assets/preview.png" alt="Polaris Dark rendering a TSX component" width="100%" />
 
-## Why it looks coherent
+## VS Code
 
-Most themes start from the syntax palette. Polaris started from the other end.
+### Install from the Marketplace
 
-It began as the code-block theme for a portfolio site, so every syntax colour had to already
-exist in that site's design system. Keywords reuse the brand violet. Types and functions reuse
-the accent of one product, strings the accent of another, numbers a third. Nothing was invented
-for the editor.
+Search for **Polaris Dark** in the Extensions view, then select **Install**. Alternatively:
 
-The side effect is that the palette is **narrow on purpose** — five hues doing real work instead
-of twelve competing for attention — and the greys carry a violet bias, so nothing reads as
-neutral sludge next to the accents.
+```sh
+code --install-extension <publisher-id>.polaris-dark
+```
 
-## Install
+### Install the packaged extension locally
 
-### From the Zed extension store
+```sh
+bunx --yes @vscode/vsce package
+code --install-extension polaris-dark-1.0.0.vsix
+```
 
-Not published yet. Once it is: `zed: extensions` → search **Polaris** → Install.
+Then open the Color Theme picker with `cmd+K cmd+T` and select **Polaris Dark**.
+
+### Development
+
+In VS Code, run **Extensions: Install from VSIX...** and select the generated `.vsix` package. The
+VS Code source is `themes/Polaris Dark-color-theme.json`; it uses TextMate scopes and semantic tokens
+to preserve the Zed theme's syntax intent across TypeScript/TSX, HTML, CSS, JSON, Markdown and Git.
+
+## Zed
+
+The original Zed theme remains in `themes/polaris.json`.
 
 ### Manually
 
@@ -57,7 +67,7 @@ cloned folder. Edits to `themes/polaris.json` hot-reload.
 | White | `#EDEAF5` | variables, parameters *(italic)*, markdown titles | ink 100 |
 | Lime | `#BEF264` | diff added, git created | — |
 | Rose | `#FB7185` | diff removed, errors | — |
-| Deep violet | `#6D28D9` | active-line veil (14%), AI ghost text | brand accent, deepest step |
+| Deep violet | `#6D28D9` | active-line veil, focus, AI ghost text | brand accent, deepest step |
 
 ### Surfaces
 
@@ -69,57 +79,39 @@ cloned folder. Edits to `themes/polaris.json` hot-reload.
 | `#1F1C2B` | borders |
 | `#322C46` | line numbers, indent guides |
 
-`#08070C` rather than `#000`: pure black smears on OLED panels.
+`#08070C` rather than `#000`: pure black smears on OLED panels. The elevation ladder runs
+**inwards**, not outwards — the editor is the deepest surface and the chrome sits above it.
 
-The elevation ladder runs **inwards**, not outwards — the editor is the deepest surface and the
-chrome sits above it. That is deliberate: it makes the code the floor of the window rather than a
-panel floating on top of one.
+## Publishing to the VS Code Marketplace
 
-## Three decisions you will notice
+The extension publisher is [`viniengelage`](https://marketplace.visualstudio.com/manage/publishers/).
 
-**Types and functions share the blue.** `Entry` and `.map` come out the same colour. Violet
-already carries the keyword, and opening a third hue for types made every line noisy. If you
-want them apart, `#88BCFB` is a lighter sibling already present in the terminal ramp.
+1. In Azure DevOps, create a Personal Access Token scoped to **Marketplace → Manage** for **All accessible organizations**. Store it in a password manager; do not commit it.
+2. Authenticate and publish:
 
-**JSX and HTML attributes are amber.** `className`, `key` and `delay` take the same colour as
-numbers. The collision is accepted, not overlooked: in `delay={index * 60}` the attribute and the
-number match. The alternative was a sixth hue, which the palette does not have room for.
+   ```sh
+   bunx --yes @vscode/vsce login viniengelage
+   bunx --yes @vscode/vsce publish
+   ```
 
-**AI ghost text is deep violet.** `#6D28D9` is used by no real token anywhere in the theme, which
-is exactly the point — an inline completion can never be mistaken for code that already exists in
-the file. It also reads dimmer than any live token while staying above the contrast of most
-editors' default ghost text.
+3. For a release update, increment `version` according to SemVer, update `CHANGELOG.md`, then run:
 
-## Coverage
+   ```sh
+   bunx --yes @vscode/vsce publish patch
+   ```
 
-150 style keys, 50 tree-sitter captures, and the full 16-colour terminal ANSI ramp with `dim` and
-`bright` steps. Git states, diagnostics, search matches, document highlights, indent guides,
-scrollbars and collaboration cursors are all mapped rather than left to Zed's fallbacks.
+The Marketplace rejects SVG icons and non-HTTPS images in `README.md`/`CHANGELOG.md`; this package
+uses `assets/icon-128.png` and only ships the required PNG assets. For automated releases, prefer
+Microsoft Entra workload identity (`vsce publish --azure-credential`) over a long-lived PAT.
 
-Italics are used in exactly three places — comments, function parameters and AI ghost text — so
-they stay informative instead of decorative.
+## Asset development
 
-## Development
-
-`themes/polaris.json` is the source of truth; it validates against
-[Zed's theme schema](https://zed.dev/schema/themes/v0.2.0.json).
-
-The brand mark and the preview both live as vector (`assets/icon.svg`, `assets/preview.svg`).
-Regenerate the raster exports with:
+The brand mark and preview live as vector (`assets/icon.svg`, `assets/preview.svg`). Regenerate
+the raster exports with:
 
 ```sh
 ./scripts/render-assets.sh
 ```
-
-macOS ships no SVG rasteriser, so the script drives headless Chrome and crops with `sips`. Read
-the comments in it before changing the window sizes — both tools have quirks that the current
-numbers work around.
-
-## Roadmap
-
-- Publish to the Zed extension registry
-- VS Code and Cursor port
-- A light variant, if there is demand
 
 ## Licence
 
