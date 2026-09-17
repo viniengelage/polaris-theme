@@ -33,7 +33,7 @@ fi
 shoot() {
   local wrapper="$1" win_w="$2" win_h="$3" out="$4"
   local profile
-  profile="$(mktemp -d -t polaris-chrome-XXXXXX)"
+  profile="$(mktemp -d -t polar-dark-chrome-XXXXXX)"
 
   rm -f "$out"
 
@@ -66,8 +66,8 @@ shoot() {
   fi
 }
 
-raw_icon="$(mktemp -t polaris-icon-XXXXXX).png"
-raw_prev="$(mktemp -t polaris-prev-XXXXXX).png"
+raw_icon="$(mktemp -t polar-dark-icon-XXXXXX).png"
+raw_prev="$(mktemp -t polar-dark-prev-XXXXXX).png"
 
 shoot "icon-render.html" 760 760 "$raw_icon"
 sips -c 512 512 "$raw_icon" --out "$ROOT/assets/icon-512.png" >/dev/null

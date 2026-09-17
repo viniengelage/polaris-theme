@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Polaris are documented here.
+All notable changes to Polar Dark are documented here.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -11,8 +11,8 @@ First release.
 
 ### Added
 
-- `Polaris Dark` for VS Code — UI chrome, semantic tokens, TextMate scopes, Git/diff states and the full 16-colour terminal ANSI ramp.
-- `Polaris Dark` for Zed — 150 style keys, 50 tree-sitter captures, full terminal ANSI ramp with `dim`
+- `Polar Dark` for VS Code — UI chrome, semantic tokens, TextMate scopes, Git/diff states and the full 16-colour terminal ANSI ramp.
+- `Polar Dark` for Zed — 150 style keys, 50 tree-sitter captures, full terminal ANSI ramp with `dim`
   and `bright` steps.
 - Brand mark as vector (`assets/icon.svg`) plus 512/128/32 raster exports and a reproducible
   render script.

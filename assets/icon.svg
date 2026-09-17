@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Polaris">
-  <title>Polaris</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Polar Dark">
+  <title>Polar Dark</title>
   <defs>
     <clipPath id="tile">
       <rect width="512" height="512" rx="112" ry="112" />
@@ -27,7 +27,7 @@
     <path transform="translate(148 372) scale(0.07)" fill="#D8B4FE"
       d="M100 0C100 98.4 118 120 200 120C118 120 100 141.6 100 240C100 141.6 82 120 0 120C82 120 100 98.4 100 0Z" />
 
-    <!-- Polaris: raio vertical 120 contra horizontal 100. A assimetria é o que
+    <!-- Estrela polar: raio vertical 120 contra horizontal 100. A assimetria é o que
          faz ler como estrela polar e não como sparkle genérico de UI. -->
     <path transform="translate(156 136)" fill="#C084FC"
       d="M100 0C100 98.4 118 120 200 120C118 120 100 141.6 100 240C100 141.6 82 120 0 120C82 120 100 98.4 100 0Z" />

@@ -1,55 +1,55 @@
 <div align="center">
-  <img src="assets/icon-128.png" width="112" height="112" alt="Polaris" />
-  <h1>Polaris</h1>
+  <img src="assets/icon-128.png" width="112" height="112" alt="Polar Dark" />
+  <h1>Polar Dark</h1>
   <p><strong>A dark theme for VS Code and Zed with a violet north star.</strong></p>
   <p>Syntax colours derived from a working design system — not picked in isolation.</p>
 </div>
 
-<img src="assets/preview.png" alt="Polaris Dark rendering a TSX component" width="100%" />
+<img src="assets/preview.png" alt="Polar Dark rendering a TSX component" width="100%" />
 
 ## VS Code
 
 ### Install from the Marketplace
 
-Search for **Polaris Dark** in the Extensions view, then select **Install**. Alternatively:
+Search for **Polar Dark** in the Extensions view, then select **Install**. Alternatively:
 
 ```sh
-code --install-extension <publisher-id>.polaris-dark
+code --install-extension viniengelage.polar-dark
 ```
 
 ### Install the packaged extension locally
 
 ```sh
 bunx --yes @vscode/vsce package
-code --install-extension polaris-dark-1.0.0.vsix
+code --install-extension polar-dark-1.0.0.vsix
 ```
 
-Then open the Color Theme picker with `cmd+K cmd+T` and select **Polaris Dark**.
+Then open the Color Theme picker with `cmd+K cmd+T` and select **Polar Dark**.
 
 ### Development
 
 In VS Code, run **Extensions: Install from VSIX...** and select the generated `.vsix` package. The
-VS Code source is `themes/Polaris Dark-color-theme.json`; it uses TextMate scopes and semantic tokens
+VS Code source is `themes/Polar Dark-color-theme.json`; it uses TextMate scopes and semantic tokens
 to preserve the Zed theme's syntax intent across TypeScript/TSX, HTML, CSS, JSON, Markdown and Git.
 
 ## Zed
 
-The original Zed theme remains in `themes/polaris.json`.
+The Zed theme lives in `themes/polar-dark.json`.
 
 ### Manually
 
 ```sh
 mkdir -p ~/.config/zed/themes
-curl -o ~/.config/zed/themes/polaris.json \
-  https://raw.githubusercontent.com/viniengelage/polaris-theme/main/themes/polaris.json
+curl -o ~/.config/zed/themes/polar-dark.json \
+  https://raw.githubusercontent.com/viniengelage/polaris-theme/main/themes/polar-dark.json
 ```
 
-Then `cmd+K cmd+T` → **Polaris Dark**. Zed picks up new theme files immediately — no restart.
+Then `cmd+K cmd+T` → **Polar Dark**. Zed picks up new theme files immediately — no restart.
 
 ### As a dev extension
 
 Clone this repository, then in Zed: `zed: extensions` → **Install Dev Extension** → select the
-cloned folder. Edits to `themes/polaris.json` hot-reload.
+cloned folder. Edits to `themes/polar-dark.json` hot-reload.
 
 ## Palette
 

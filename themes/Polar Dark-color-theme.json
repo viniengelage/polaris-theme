@@ -1,6 +1,6 @@
 {
   "$schema": "vscode://schemas/color-theme",
-  "name": "Polaris Dark",
+  "name": "Polar Dark",
   "type": "dark",
   "semanticHighlighting": true,
   "colors": {

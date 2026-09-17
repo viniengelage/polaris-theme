@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" role="img"
-  aria-label="Polaris Dark renderizando um componente TSX no Zed">
-  <title>Polaris Dark — preview</title>
-  <desc>Amostra de TSX colorida com as cores exatas de themes/polaris.json.</desc>
+  aria-label="Polar Dark renderizando um componente TSX no Zed">
+  <title>Polar Dark — preview</title>
+  <desc>Amostra de TSX colorida com as cores exatas de themes/polar-dark.json.</desc>
 
   <defs>
     <clipPath id="frame">
@@ -37,7 +37,7 @@
     <text class="m" x="24" y="27" font-size="11" font-weight="500" fill="#C7C2D6">timeline.tsx</text>
     <text class="m" x="130" y="27" font-size="11" fill="#837C98">work.tsx</text>
     <text class="m" x="744" y="27" font-size="10" font-weight="500" letter-spacing="1.2"
-      text-anchor="end" fill="#837C98">POLARIS DARK</text>
+      text-anchor="end" fill="#837C98">POLAR DARK</text>
     <rect y="44" width="760" height="1" fill="#1F1C2B" />
 
     <!-- editor.active_line.background: violeta-800 a 14% -->
