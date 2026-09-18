@@ -82,28 +82,6 @@ cloned folder. Edits to `themes/polar-dark.json` hot-reload.
 `#08070C` rather than `#000`: pure black smears on OLED panels. The elevation ladder runs
 **inwards**, not outwards — the editor is the deepest surface and the chrome sits above it.
 
-## Publishing to the VS Code Marketplace
-
-The extension publisher is [`viniengelage`](https://marketplace.visualstudio.com/manage/publishers/).
-
-1. In Azure DevOps, create a Personal Access Token scoped to **Marketplace → Manage** for **All accessible organizations**. Store it in a password manager; do not commit it.
-2. Authenticate and publish:
-
-   ```sh
-   bunx --yes @vscode/vsce login viniengelage
-   bunx --yes @vscode/vsce publish
-   ```
-
-3. For a release update, increment `version` according to SemVer, update `CHANGELOG.md`, then run:
-
-   ```sh
-   bunx --yes @vscode/vsce publish patch
-   ```
-
-The Marketplace rejects SVG icons and non-HTTPS images in `README.md`/`CHANGELOG.md`; this package
-uses `assets/icon-128.png` and only ships the required PNG assets. For automated releases, prefer
-Microsoft Entra workload identity (`vsce publish --azure-credential`) over a long-lived PAT.
-
 ## Asset development
 
 The brand mark and preview live as vector (`assets/icon.svg`, `assets/preview.svg`). Regenerate
